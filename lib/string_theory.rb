@@ -1,3 +1,5 @@
-def sort_by_appearance(characters_to_sort, long_text)
-  # code goes here
+def sort_by_appearance(string, text)
+  string.chars.sort_by do |c|
+    text.scan(c).count
+  end.reverse.join
 end
